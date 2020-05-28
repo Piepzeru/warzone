@@ -1,47 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.14.5/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.14.5/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.14.5/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.14.5/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.14.5/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warzone</title>
 
-    <link href="css/materialize.css" rel="stylesheet"/>
-  </head>
-  <body style="background-color: darkgrey">
-    <nav>
-      <div class="nav-wrapper black">
-        <a href="index.html" class="brand-logo">Warzone</a>
-        <ul id="mobile-nav" class="right hide-on-med-and-down">
-          <li><a href="#">link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-        </ul>
-      </div>
-    </nav>
+  <link href="css/materialize.css" rel="stylesheet" />
+  <link href="css/suav.css" rel="stylesheet" />
+</head>
 
-    <main class="container">
-      <div class="row">
-        <div class="col s6">
-          <h4>Warzone Firebase App</h4>
-          <h6>Load your friends stats and compare team stats</h6>
-          <p>Instead of comparing individual stats against each other, team up and see what team ranks higher.
+<body style="background-color: darkgrey">
+
+  <nav class="nav-extended">
+    <div class="nav-wrapper black">
+      <a href="index.html" class="brand-logo">Warzone</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">
+        <img src="img/icons/hamburger.jpg" height="25px"/>
+      </i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="html/login.html">Login</a></li>
+        <li><a href="html/register.html">Register</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Get Started</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#">Mobile Link</a></li>
+  </ul>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, {});
+    });
+  </script>
+
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1 style="font-size:50px">Warzone Stats</h1>
+      <p>Compare Team Stats</p>
+      <a href="#" class="waves-effect waves-light btn-large black">Compare</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="row">
+      <div class="col s6">
+        <h4>Warzone Firebase App</h4>
+        <h6>Load your friends stats and compare team stats</h6>
+        <p>Instead of comparing individual stats against each other, team up and see what team ranks higher.
           After all to get a win takes an entire team and not a single player.</p>
-        </div>
-        <div class="col s6">
+      </div>
+      <div class="col s6">
 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 center">
+        <h5>Getting Started</h5>
+        <p>Follow this guide to get started and see how your team stacks up</p>
+        <p>Designate Team Captain and have them <a href="#">register</a> for an account and team name</p>
+        <p>Team captain will need to verify email account and add usernames of team members.</p>
+        <p>Team members will receive an email with a request to join a team.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col 16 s12">
+          <h5>Footer Content</h5>
+          <p>You can use rows and columns here</p>
+        </div>
+        <div class="col 14 offset-12 s12">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+          </ul>
         </div>
       </div>
-    </main>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/materialize.js"></script>
-  </body>
+  <script src="js/materialize.js"></script>
+</body>
+
 </html>
